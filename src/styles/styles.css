@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.btn {
+  @apply py-2.5 text-primary border border-primary hover:bg-primary hover:text-white rounded;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.section-gap {
+  @apply py-16 lg:py-28;
+}
+
+.heading {
+  @apply text-primary text-4xl;
+}
+
+.sub-heading {
+  @apply text-2xl font-bold text-primary;
+}
+
+.content-heading {
+  @apply text-base font-semibold text-primary;
+}
+
+.content h2 {
+  @apply text-base font-semibold text-primary pb-4;
+}
+
+.content p,
+.content ul > li {
+  @apply text-primary font-light;
+}
