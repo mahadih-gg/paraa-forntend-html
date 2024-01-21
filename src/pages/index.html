@@ -12,18 +12,43 @@
 
 <body>
 
-  <header class="">
-    <div class="[&>span]:text-[15px] first:[&>span]:text-primary [&>span]:text-primary-200 [&>span]:border-r-2
-        [&>span]:border-primary-200 last:[&>span]:border-0 [&>span]:px-8 first:[&>span]:pl-0">
+  <header class="container m-auto px-5">
+
+    <nav class="navbar">
+
+      <div class="flex-center pt-10">
+        <img src="../assets/paraa.png" width="100px" alt="">
+      </div>
+
+      <ul class="navbar-links">
+        <button onclick="toggleNavbar()"
+          class="block md:hidden border border-primary py-2 px-4 rounded-lg mx-10 mb-5">✕</button>
+        <li><a href="#" class="active">Projects</a></li>
+        <li><a href="#">Stories</a></li>
+        <li><a href="#">Career</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">About Paraa</a></li>
+        <li><a href="#">Shala</a></li>
+        <li><a href="#">CADSE</a></li>
+      </ul>
+
+      <button onclick="toggleNavbar()" class="block md:hidden text-2xl">☰</button>
+    </nav>
+
+
+
+
+    <div class="pt-10 [&>span]:text-[15px] first:[&>span]:text-primary [&>span]:text-primary-200 [&>span]:border-r-2
+        [&>span]:border-primary-200 last:[&>span]:border-0 [&>span]:px-4 [&>span]:md:px-8 first:[&>span]:pl-0">
       <span>All</span>
       <span>Fashion</span>
       <span>Design</span>
     </div>
 
     <div class="section-gap">
-      <div class="grid grid-cols-3 [&>div>div]:h-full [&>div>div]:w-full [&>div>div]:flex
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-5 [&>div]:md:pt-0 [&>div>div]:h-full [&>div>div]:w-full [&>div>div]:flex
           [&>div>div]:justify-center [&>div>div]:items-center [&>div>div]:flex-col [&>div>div]:bg-white
-          [&>div>p]:text-center [&>div>p]:pt-5">
+          [&>div>p]:text-center [&>div>p]:md:pt-5">
         <div>
           <div>
             <img src="../assets/home/paraa.png" alt="">
@@ -252,6 +277,7 @@
     </div>
   </footer>
 
+  <script src="../scripts/script.js"></script>
 
 </body>
 

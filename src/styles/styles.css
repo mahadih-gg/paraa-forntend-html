@@ -52,6 +52,7 @@ b {
   @apply text-primary font-light;
 }
 
+/* ================ Cards Styles =================== */
 .gallery__card {
 }
 
@@ -107,4 +108,38 @@ b {
 
 .stories_gallery__card p {
   @apply text-[14px] leading-6 text-primary-300;
+}
+
+/* ============ Navbar Styles ============= */
+.navbar {
+  @apply relative flex flex-row md:flex-col justify-between md:justify-start;
+}
+.navbar ul {
+  @apply hidden md:flex flex-col md:flex-row justify-start md:justify-center items-end md:items-start;
+}
+.navbar li:last-child .navbar li a {
+  @apply bg-transparent;
+}
+.navbar ul li a {
+  @apply block relative w-60 md:w-auto text-xl md:text-base text-right md:text-center py-4 px-10 md:p-5 lg:p-10 border-b md:border-b-2 border-primary-100 text-primary-200;
+}
+
+.navbar ul li a.active {
+  @apply border-primary text-primary whitespace-nowrap;
+}
+
+.navbar ul li:not(:last-child) a:after {
+  content: "";
+  @apply absolute hidden md:block w-0.5 h-4 bg-primary-100 right-0 top-[43%];
+}
+
+.nav_show {
+  display: flex !important;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: #ffffff;
+  padding: 50px 0;
 }
