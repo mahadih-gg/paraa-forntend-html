@@ -125,27 +125,31 @@ b {
   @apply relative flex flex-row md:flex-col justify-between md:justify-start;
 }
 .navbar ul {
-  @apply hidden md:flex flex-col md:flex-row justify-start md:justify-center items-end md:items-start;
+  @apply relative hidden md:flex flex-col md:flex-row justify-start md:justify-between items-end md:items-start;
+}
+
+.navbar ul:after {
+  content: "";
+  @apply absolute bottom-0 w-full border-b md:border-b-[3px] border-primary-100;
 }
 .navbar li:last-child .navbar li a {
   @apply bg-transparent;
 }
 .navbar ul li a {
-  @apply block relative w-60 md:w-auto whitespace-nowrap text-xl md:text-base text-right md:text-center py-4 px-10 md:p-5 lg:p-10 border-b md:border-b-2 border-primary-100 text-primary-200;
+  @apply block relative w-60 md:w-auto whitespace-nowrap text-xl md:text-base text-right md:text-center py-4 px-10 md:p-5 lg:p-10 border-b md:border-b-[3px] border-primary-100 text-primary-200 z-30;
 }
 
 .navbar ul li a.active {
   @apply border-primary text-primary;
 }
 
-.navbar ul li:not(:last-child) a:after {
-  content: "";
-  @apply absolute hidden md:block w-0.5 h-4 bg-primary-100 right-0 top-[43%];
+.navbar ul li span {
+  @apply hidden md:block w-0.5 h-4 bg-primary-100 mt-5 lg:mt-[43px];
 }
 
 .nav_show {
   display: flex !important;
-  position: fixed;
+  position: fixed !important;
   width: 100vw;
   height: 100vh;
   left: 0;

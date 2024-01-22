@@ -1312,6 +1312,7 @@ b {
 }
 
 .navbar ul {
+  position: relative;
   display: none;
   flex-direction: column;
   align-items: flex-end;
@@ -1323,7 +1324,23 @@ b {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
+  }
+}
+
+.navbar ul:after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(209 209 209 / var(--tw-border-opacity));
+}
+
+@media (min-width: 768px) {
+  .navbar ul:after {
+    border-bottom-width: 3px;
   }
 }
 
@@ -1333,6 +1350,7 @@ b {
 
 .navbar ul li a {
   position: relative;
+  z-index: 30;
   display: block;
   width: 15rem;
   white-space: nowrap;
@@ -1353,7 +1371,7 @@ b {
 @media (min-width: 768px) {
   .navbar ul li a {
     width: auto;
-    border-bottom-width: 2px;
+    border-bottom-width: 3px;
     padding: 1.25rem;
     text-align: center;
     font-size: 1rem;
@@ -1374,11 +1392,8 @@ b {
   color: rgb(66 66 66 / var(--tw-text-opacity));
 }
 
-.navbar ul li:not(:last-child) a:after {
-  content: "";
-  position: absolute;
-  right: 0px;
-  top: 43%;
+.navbar ul li span {
+  margin-top: 1.25rem;
   display: none;
   height: 1rem;
   width: 0.125rem;
@@ -1387,14 +1402,20 @@ b {
 }
 
 @media (min-width: 768px) {
-  .navbar ul li:not(:last-child) a:after {
+  .navbar ul li span {
     display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar ul li span {
+    margin-top: 43px;
   }
 }
 
 .nav_show {
   display: flex !important;
-  position: fixed;
+  position: fixed !important;
   width: 100vw;
   height: 100vh;
   left: 0;
