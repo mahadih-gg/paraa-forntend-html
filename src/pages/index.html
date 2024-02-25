@@ -12,40 +12,38 @@
 
 <body>
 
+  <div class="container sticky top-0 md:static flex justify-between md:justify-center items-center bg-white z-50 pt-10">
+    <img src="../assets/paraa.png" width="100px" alt="">
+    <button onclick="toggleNavbar()" class="block md:hidden text-2xl -mt-8">☰</button>
+  </div>
+
+  <nav class="navbar container sticky top-0 bg-white z-50">
+    <ul class="navbar-links">
+      <button onclick="toggleNavbar()" class="block md:hidden border border-primary py-2 px-4 rounded-lg mx-10 mb-5">
+        ✕
+      </button>
+      <li><a href="#" class="active">Projects</a></li>
+      <li><span></span></li>
+      <li><a href="#">Stories</a></li>
+      <li><span></span></li>
+      <li><a href="#">Career</a></li>
+      <li><span></span></li>
+      <li><a href="#">Team</a></li>
+      <li><span></span></li>
+      <li><a href="#">About Paraa</a></li>
+      <li><span></span></li>
+      <li><a href="#">Shala</a></li>
+      <li><span></span></li>
+      <li><a href="#">CADSE</a></li>
+    </ul>
+  </nav>
+
+
+
   <header class="container">
 
-    <nav class="navbar">
-
-      <div class="flex-center pt-10">
-        <img src="../assets/paraa.png" width="100px" alt="">
-      </div>
-
-      <ul class="navbar-links">
-        <button onclick="toggleNavbar()"
-          class="block md:hidden border border-primary py-2 px-4 rounded-lg mx-10 mb-5">✕</button>
-        <li><a href="#" class="active">Projects</a></li>
-        <li><span></span></li>
-        <li><a href="#">Stories</a></li>
-        <li><span></span></li>
-        <li><a href="#">Career</a></li>
-        <li><span></span></li>
-        <li><a href="#">Team</a></li>
-        <li><span></span></li>
-        <li><a href="#">About Paraa</a></li>
-        <li><span></span></li>
-        <li><a href="#">Shala</a></li>
-        <li><span></span></li>
-        <li><a href="#">CADSE</a></li>
-      </ul>
-
-      <button onclick="toggleNavbar()" class="block md:hidden text-2xl">☰</button>
-    </nav>
-
-
-
-
     <div class="pt-10 [&>span]:text-[15px] first:[&>span]:text-primary [&>span]:text-primary-200 [&>span]:border-r-2
-        [&>span]:border-primary-200 last:[&>span]:border-0 [&>span]:px-4 [&>span]:md:px-8 first:[&>span]:pl-0">
+    [&>span]:border-primary-200 last:[&>span]:border-0 [&>span]:px-4 [&>span]:md:px-8 first:[&>span]:pl-0">
       <span>All</span>
       <span>Fashion</span>
       <span>Design</span>
